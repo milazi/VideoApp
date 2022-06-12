@@ -190,6 +190,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -238,6 +239,10 @@
     <Compile Include="Migrations\202206101536074_AdditionOfValidationOnMovie.cs" />
     <Compile Include="Migrations\202206101536074_AdditionOfValidationOnMovie.designer.cs">
       <DependentUpon>202206101536074_AdditionOfValidationOnMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206121623349_SeedUsers.cs" />
+    <Compile Include="Migrations\202206121623349_SeedUsers.designer.cs">
+      <DependentUpon>202206121623349_SeedUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -546,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206101536074_AdditionOfValidationOnMovie.resx">
       <DependentUpon>202206101536074_AdditionOfValidationOnMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206121623349_SeedUsers.resx">
+      <DependentUpon>202206121623349_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

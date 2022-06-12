@@ -22,8 +22,7 @@ namespace Vidly.Controllers
         }
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
-            return View(movies);
+            return View();
         }
 
         public ActionResult Create()
@@ -77,7 +76,7 @@ namespace Vidly.Controllers
             }
             catch (Exception e)
             {
-
+               Console.WriteLine(e.Message);
                 //return Content(e.ToString());
                 //return View("MovieForm");
                 return RedirectToAction("Index");
@@ -111,13 +110,6 @@ namespace Vidly.Controllers
             //  return View(movie);
 
             return View(viewModel);
-            // return Content("Hello World");
-
-            // return HttpNotFound();
-
-            // return new EmptyResult();
-
-            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name"});
         }
 
         public ActionResult Edit (int id)
