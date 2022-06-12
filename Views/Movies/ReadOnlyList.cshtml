@@ -1,0 +1,40 @@
+﻿@model List<Vidly.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+<table class="table table-striped" id="movies">
+    <thead>
+        <tr>
+            <th>Movies</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+@section scripts {
+    <script>
+       var table = $("#movies").DataTable({
+            ajax: {
+                url: "/api/movies",
+                dataSrc: ""
+            },
+            columns: [
+                {
+                    data: "name",
+                    render: function (data, type, movie) {
+                        return "<a href='/movies/details/" + movie.id + "'>" + movie.name + "</a>"
+                    }
+                },
+                {
+                    data: "genre.name"
+                }
+            ]
+        });
+    </script>
+}
