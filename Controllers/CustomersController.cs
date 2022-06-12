@@ -24,10 +24,7 @@ namespace Vidly.Controllers
         }
         public ActionResult Index()
         {
-
-            var customers = _context.Customers.Include(c => c.Membership).ToList();
-
-            return View(customers);
+            return View();
         }
 
         // GET: Customers/Details/5
