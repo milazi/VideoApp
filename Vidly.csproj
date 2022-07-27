@@ -49,6 +49,21 @@
     <Reference Include="AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>packages\AutoMapper.4.1.0\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glimpse.AspNet.1.8.0\lib\net45\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glimpse.1.8.6\lib\net45\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.EF6, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glimpse.EF6.1.6.5\lib\net45\Glimpse.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc5, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glimpse.Mvc5.1.5.3\lib\net45\Glimpse.Mvc5.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -185,6 +200,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
+    <Compile Include="Controllers\Api\RentalsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -193,6 +209,8 @@
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
+    <Compile Include="Dtos\RentalDto.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,6 +262,18 @@
     <Compile Include="Migrations\202206121623349_SeedUsers.designer.cs">
       <DependentUpon>202206121623349_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206121716387_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\202206121716387_AddDrivingLicenseToApplicationUser.designer.cs">
+      <DependentUpon>202206121716387_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206131730404_NewRental.cs" />
+    <Compile Include="Migrations\202206131730404_NewRental.designer.cs">
+      <DependentUpon>202206131730404_NewRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206131828170_AddDatePropertiesToRental.cs" />
+    <Compile Include="Migrations\202206131828170_AddDatePropertiesToRental.designer.cs">
+      <DependentUpon>202206131828170_AddDatePropertiesToRental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -253,6 +283,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -556,6 +587,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206121623349_SeedUsers.resx">
       <DependentUpon>202206121623349_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206121716387_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>202206121716387_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206131730404_NewRental.resx">
+      <DependentUpon>202206131730404_NewRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206131828170_AddDatePropertiesToRental.resx">
+      <DependentUpon>202206131828170_AddDatePropertiesToRental.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
